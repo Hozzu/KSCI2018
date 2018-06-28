@@ -4,7 +4,7 @@ __global__ void vectorAdd(int *a, int *b, int *c, int n){
 	int i = blockIdx.x*blockDim.x+threadIdx.x;
 	if(i<n)
 		for(int j=0;j<100;j++)
-			c[i] = c[i] + a[i]*b[i];
+			c[i] = a[i] + b[i];
 }
 
 int main(void){
